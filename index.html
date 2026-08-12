@@ -86,9 +86,8 @@
         video.play();
     });
         video.addEventListener("timeupdate", function () {
-    if (video.duration && video.currentTime >= video.duration - 0.4) {
+    if(video.duration && video.currentTime >= video.duration - 1) {
         video.pause();
-        video.currentTime = video.duration - 0.4;
     }
 });
     </script>
