@@ -85,6 +85,10 @@
         playButton.style.display = "none";
         video.play();
     });
+        video.addEventListener("ended", function () {
+    video.pause();
+    video.currentTime = video.duration - 0.05;
+});
     </script>
 
 </body>
