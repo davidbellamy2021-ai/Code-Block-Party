@@ -28,20 +28,49 @@
             height: auto;
             margin: 0 auto;
         }
+        .video-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+#playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 58px;
+    height: 58px;
+    border: none;
+    border-radius: 50%;
+
+    background: white;
+    color: black;
+
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
     </style>
 </head>
 
 <body style="background-color:black; text-align:center;">
     
 <div class="hero-stage">
+    <div class="video-wrap">
+
     <video
         id="introVideo"
         playsinline
-        > 
-
+    >
         <source src="CBPIntro1.6.mp4" type="video/mp4">
-
     </video>
+
+    <button id="playButton" aria-label="Play Code Block Party manifesto">
+        ▶
+    </button>
+
+    </div>
 
     <img
     id="logoImage"
@@ -49,13 +78,13 @@
     >
 </div>
     <script>
-        const video = document.getElementById("introVideo");
-        const logo = document.getElementById("logoImage");
+    const video = document.getElementById("introVideo");
+    const playButton = document.getElementById("playButton");
 
-        video.addEventListener("ended", function () {
-            video.style.display = "none";
-            logo.style.display = "block";
-        });
+    playButton.addEventListener("click", function () {
+        playButton.style.display = "none";
+        video.play();
+    });
     </script>
 
 </body>
