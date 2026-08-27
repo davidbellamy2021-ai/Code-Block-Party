@@ -478,10 +478,12 @@
         .ebook-hotspot {
     position: absolute;
     left: 50%;
-    top: 70%;
+    /* Homepagebg.png is 875px wide. These width-based measurements
+       follow the painted e-book border as the background scales. */
+    top: 149.3vw;
     transform: translate(-50%, -50%);
-    width: 78%;
-    height: 9%;
+    width: 81%;
+    height: 23.3vw;
     display: block;
     background: transparent;
     z-index: 20;
@@ -501,6 +503,11 @@
     background: transparent;
     
 }
+.ebook-hotspot,
+.ebook-hotspot:hover,
+.ebook-hotspot:focus,
+.ebook-hotspot:active,
+.ebook-hotspot:visited,
 .join-party-hotspot,
 .join-party-hotspot:hover,
 .join-party-hotspot:focus,
