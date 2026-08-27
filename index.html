@@ -395,7 +395,19 @@
         top: 50% !important;
         transform: translateY(-50%) !important;
     }
-} 
+}
+
+/* Keep the lead-in orange while making the supporting sentence white. */
+#early-access [id^="mlb2-"].ml-form-embedContainer
+.ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p {
+    color: #ffffff !important;
+}
+
+#early-access [id^="mlb2-"].ml-form-embedContainer
+.ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p strong {
+    color: rgb(242, 140, 40) !important;
+}
+ 
         .ebook-hotspot {
     position: absolute;
     left: 50%;
