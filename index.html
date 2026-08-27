@@ -442,6 +442,38 @@
     padding: 0 clamp(18px, 1.8svh, 34px) !important;
     color: rgb(242, 140, 40) !important;
 }
+
+/* A phone can request a desktop-width layout while remaining a touch
+   device. Width-based sizing keeps these controls visually identical
+   across both browser modes on the same physical screen. */
+@media (hover: none) and (pointer: coarse), (max-device-width: 768px) {
+    #early-access [id^="mlb2-"].ml-form-embedContainer
+    .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow
+    .ml-field-email input[type="email"] {
+        min-height: 10vw !important;
+        height: 10vw !important;
+        font-size: 3.4vw !important;
+        line-height: 1.2 !important;
+        padding: 0 3vw !important;
+    }
+
+    #early-access [id^="mlb2-"].ml-form-embedContainer
+    .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow
+    .ml-field-email input[type="email"]::placeholder {
+        font-size: 3.4vw !important;
+        line-height: 1.2 !important;
+    }
+
+    #early-access [id^="mlb2-"].ml-form-embedContainer
+    .ml-form-embedWrapper .ml-form-embedBody
+    .ml-form-embedSubmit button.primary {
+        min-height: 11vw !important;
+        height: 11vw !important;
+        font-size: 3.4vw !important;
+        line-height: 1.15 !important;
+        padding: 0 3vw !important;
+    }
+}
  
         .ebook-hotspot {
     position: absolute;
