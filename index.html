@@ -196,7 +196,113 @@
 
     .early-access-form-wrap .ml-form-embedSubmit {
         flex: 0 0 auto;
-        margin-top: 12px;
+        margin-top: 0;
+    }
+
+    /* Scale and distribute the actual form contents with screen height.
+       Samsung Browser may report a desktop-width viewport, so svh is the
+       reliable measurement for readable, proportional mobile sizing. */
+    .early-access-form-wrap .ml-form-embedContainer .ml-form-embedWrapper
+    .ml-form-embedBody.row-form {
+        display: grid !important;
+        grid-template-rows: auto minmax(0, 1fr) !important;
+        gap: clamp(18px, 1.7svh, 34px) !important;
+        padding: clamp(24px, 2.2svh, 44px)
+                 clamp(22px, 3vw, 58px)
+                 clamp(26px, 2.5svh, 50px) !important;
+    }
+
+    .early-access-form-wrap .ml-form-embedContainer .ml-form-embedWrapper
+    .ml-block-form {
+        display: grid !important;
+        grid-template-rows: minmax(0, 1fr) auto !important;
+        gap: clamp(16px, 1.5svh, 30px) !important;
+        min-height: 0 !important;
+    }
+
+    .early-access-form-wrap .ml-form-embedContainer .ml-form-embedWrapper
+    .ml-form-formContent {
+        display: grid !important;
+        grid-template-rows: auto minmax(0, 1fr) !important;
+        gap: clamp(14px, 1.25svh, 26px) !important;
+        min-height: 0 !important;
+    }
+
+    .early-access-form-wrap .ml-form-embedContainer .ml-form-embedWrapper
+    .ml-form-fieldRow.ml-last-item,
+    .early-access-form-wrap .ml-form-embedContainer .ml-form-embedWrapper
+    .ml-field-early_access_interests {
+        display: block !important;
+        height: 100% !important;
+        min-height: 0 !important;
+    }
+
+    .early-access-form-wrap .ml-form-embedContainer .ml-form-embedWrapper
+    .custom-checkbox-radio-list {
+        display: grid !important;
+        grid-template-rows: repeat(13, minmax(0, 1fr)) !important;
+        align-items: stretch !important;
+        justify-content: stretch !important;
+        height: 100% !important;
+        min-height: 0 !important;
+    }
+
+    .early-access-form-wrap .ml-form-embedContainer .ml-form-embedWrapper
+    .custom-control.custom-checkbox {
+        display: flex !important;
+        align-items: center !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding-left: clamp(26px, 2.2svh, 42px) !important;
+    }
+
+    .early-access-form-wrap .ml-form-embedContainer .ml-form-embedWrapper
+    .ml-form-embedContent h4 {
+        font-size: clamp(26px, 2.35svh, 44px) !important;
+        line-height: 1.12 !important;
+        margin-bottom: clamp(12px, 1.1svh, 22px) !important;
+    }
+
+    .early-access-form-wrap .ml-form-embedContainer .ml-form-embedWrapper
+    .ml-form-embedContent p {
+        font-size: clamp(16px, 1.35svh, 26px) !important;
+        line-height: 1.35 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .early-access-form-wrap .ml-form-embedContainer .ml-form-embedWrapper
+    .ml-form-fieldRow input[type="email"] {
+        min-height: clamp(48px, 4.8svh, 78px) !important;
+        height: clamp(48px, 4.8svh, 78px) !important;
+        font-size: clamp(16px, 1.3svh, 25px) !important;
+        line-height: 1.2 !important;
+        padding: 0 clamp(14px, 1.4svh, 26px) !important;
+        box-sizing: border-box !important;
+    }
+
+    .early-access-form-wrap .ml-form-embedContainer .ml-form-embedWrapper
+    .custom-control-label {
+        font-size: clamp(15px, 1.22svh, 23px) !important;
+        line-height: 1.25 !important;
+    }
+
+    .early-access-form-wrap .ml-form-embedContainer .ml-form-embedWrapper
+    .custom-control-label::before,
+    .early-access-form-wrap .ml-form-embedContainer .ml-form-embedWrapper
+    .custom-control-label::after {
+        width: clamp(17px, 1.45svh, 27px) !important;
+        height: clamp(17px, 1.45svh, 27px) !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+
+    .early-access-form-wrap .ml-form-embedContainer .ml-form-embedWrapper
+    .ml-form-embedSubmit button.primary {
+        min-height: clamp(52px, 5.2svh, 84px) !important;
+        height: clamp(52px, 5.2svh, 84px) !important;
+        font-size: clamp(18px, 1.5svh, 28px) !important;
+        line-height: 1.15 !important;
+        padding: 0 clamp(18px, 1.8svh, 34px) !important;
     }
 } 
         .ebook-hotspot {
