@@ -304,6 +304,68 @@
         line-height: 1.15 !important;
         padding: 0 clamp(18px, 1.8svh, 34px) !important;
     }
+
+    /* Keep all 13 interests in distinct, proportional rows.
+       An explicit viewport allocation prevents MailerLite's intrinsic
+       field height from collapsing the grid. */
+    .early-access-form-wrap .ml-form-embedContainer .ml-form-embedWrapper
+    .ml-form-formContent {
+        grid-template-rows: auto 42svh !important;
+    }
+
+    .early-access-form-wrap .ml-form-embedContainer .ml-form-embedWrapper
+    .ml-form-fieldRow.ml-last-item,
+    .early-access-form-wrap .ml-form-embedContainer .ml-form-embedWrapper
+    .ml-field-early_access_interests,
+    .early-access-form-wrap .ml-form-embedContainer .ml-form-embedWrapper
+    .custom-checkbox-radio-list {
+        height: 42svh !important;
+        min-height: 42svh !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    .early-access-section .early-access-form-wrap
+    .ml-form-embedContainer .ml-form-embedWrapper
+    .ml-form-embedBody .ml-form-fieldRow
+    .custom-control.custom-checkbox {
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 0 !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .early-access-section .early-access-form-wrap
+    .ml-form-embedContainer .ml-form-embedWrapper
+    .ml-form-embedBody .ml-form-fieldRow
+    .custom-control.custom-checkbox label.custom-control-label {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+        white-space: normal !important;
+        font-size: clamp(16px, 1.2svh, 23px) !important;
+        line-height: 1.2 !important;
+        margin: 0 !important;
+    }
+
+    .early-access-section .early-access-form-wrap
+    .ml-form-embedContainer .ml-form-embedWrapper
+    .ml-form-embedBody .ml-form-fieldRow
+    .custom-control.custom-checkbox label.custom-control-label::before,
+    .early-access-section .early-access-form-wrap
+    .ml-form-embedContainer .ml-form-embedWrapper
+    .ml-form-embedBody .ml-form-fieldRow
+    .custom-control.custom-checkbox label.custom-control-label::after {
+        width: clamp(16px, 1.15svh, 23px) !important;
+        height: clamp(16px, 1.15svh, 23px) !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
 } 
         .ebook-hotspot {
     position: absolute;
