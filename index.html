@@ -118,30 +118,85 @@
 
 @media (max-width: 768px) {
     .early-access-section {
+        width: 100%;
+        height: 100svh;
         min-height: 100svh;
         padding: 0;
         align-items: stretch;
+        overflow: hidden;
     }
 
     .early-access-form-wrap {
         width: 100%;
         max-width: none;
+        height: 100svh;
         min-height: 100svh;
         border-radius: 0;
-        display: flex;
+        display: block;
     }
 
+    /* Remove MailerLite's table-cell centering and carry the viewport
+       height all the way down to the blue form panel itself. */
     .early-access-form-wrap > .ml-embedded,
     .early-access-form-wrap .ml-form-embedContainer,
-    .early-access-form-wrap .ml-form-align-center,
-    .early-access-form-wrap .ml-form-embedWrapper.embedForm {
-        min-height: 100svh;
+    .early-access-form-wrap .ml-form-align-center {
+        width: 100% !important;
+        max-width: none !important;
+        height: 100% !important;
+        min-height: 100% !important;
+        display: block !important;
+        vertical-align: top !important;
     }
 
     .early-access-form-wrap .ml-form-embedWrapper.embedForm {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        width: 100% !important;
+        max-width: none !important;
+        height: 100% !important;
+        min-height: 100% !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        overflow-y: auto;
+    }
+
+    .early-access-form-wrap .ml-form-embedHeader {
+        flex: 0 0 auto;
+    }
+
+    .early-access-form-wrap .ml-form-embedBody.row-form {
+        flex: 1 1 auto;
+        min-height: 0;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        padding-bottom: 20px !important;
+    }
+
+    .early-access-form-wrap .ml-block-form,
+    .early-access-form-wrap .ml-form-formContent {
+        flex: 1 1 auto;
+        min-height: 0;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .early-access-form-wrap .ml-form-fieldRow.ml-last-item,
+    .early-access-form-wrap .ml-field-early_access_interests,
+    .early-access-form-wrap .custom-checkbox-radio-list {
+        flex: 1 1 auto;
+        min-height: 0;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .early-access-form-wrap .custom-checkbox-radio-list {
+        justify-content: space-evenly !important;
+    }
+
+    .early-access-form-wrap .ml-form-embedSubmit {
+        flex: 0 0 auto;
+        margin-top: 12px;
     }
 } 
         .ebook-hotspot {
