@@ -407,6 +407,41 @@
 .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p strong {
     color: rgb(242, 140, 40) !important;
 }
+
+/* Keep the email and CTA typography proportional in both mobile and
+   desktop rendering modes. MailerLite otherwise restores tiny desktop
+   font sizes even though the controls themselves remain full-width. */
+#early-access [id^="mlb2-"].ml-form-embedContainer
+.ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow
+.ml-field-email input[type="email"] {
+    min-height: clamp(48px, 4.8svh, 78px) !important;
+    height: clamp(48px, 4.8svh, 78px) !important;
+    font-size: clamp(18px, 1.3svh, 25px) !important;
+    line-height: 1.2 !important;
+    padding: 0 clamp(14px, 1.4svh, 26px) !important;
+    box-sizing: border-box !important;
+    color: rgb(242, 140, 40) !important;
+}
+
+#early-access [id^="mlb2-"].ml-form-embedContainer
+.ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow
+.ml-field-email input[type="email"]::placeholder {
+    font-size: inherit !important;
+    line-height: inherit !important;
+    color: rgb(242, 140, 40) !important;
+    opacity: 1 !important;
+}
+
+#early-access [id^="mlb2-"].ml-form-embedContainer
+.ml-form-embedWrapper .ml-form-embedBody
+.ml-form-embedSubmit button.primary {
+    min-height: clamp(52px, 5.2svh, 84px) !important;
+    height: clamp(52px, 5.2svh, 84px) !important;
+    font-size: clamp(18px, 1.5svh, 28px) !important;
+    line-height: 1.15 !important;
+    padding: 0 clamp(18px, 1.8svh, 34px) !important;
+    color: rgb(242, 140, 40) !important;
+}
  
         .ebook-hotspot {
     position: absolute;
