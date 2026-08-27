@@ -45,6 +45,10 @@
         @media (orientation: portrait) {
             .video-wrap {
                 max-height: calc(80vw - 100px);
+                /* The source video contains dark portrait padding beneath
+                   the television. Clip that padding without rescaling the
+                   video or moving the play button. */
+                clip-path: inset(0 0 22% 0 round 16px);
             }
         }
 
